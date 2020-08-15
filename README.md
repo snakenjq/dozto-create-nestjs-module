@@ -12,4 +12,6 @@ This is a lib followed NPX approach to create module folders for Nestjs.
 
 Use this with npx `npx dozto-nestjs-create-module create`
 
-Once sucess, please input `module-name`. There will be created at the src folder with controller & resolver & service & model etc, that you execute this command.
+Once success, please input `module-name`. There will be created at the src folder with controller & resolver & service & model etc.
+
+![avatar](https://ibb.co/YfvRfxG)
