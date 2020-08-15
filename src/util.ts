@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import * as fsx from 'fs-extra';
 import * as path from 'path';
-import * as replace from 'replace';
 import * as CONFIG from './config.json';
 import * as ora from 'ora';
+import * as replace from 'replace';
 import { Clone } from 'nodegit';
 
 export const initModuleFolder = async (targetPath: string): Promise<void> => {
@@ -77,9 +77,10 @@ export const rename = (
 export const checkSrcFolder = (targetPath: string): string => {
   const spinner = ora(`Check directory`).start();
   const packagePath = path.join(targetPath, 'package.json');
+  //TODO:check package.json, if include "@nestjs/common".
   if (!fs.existsSync(packagePath)) {
     spinner.fail();
-    console.error('Path is not a root directory');
+    console.error('Path is not a NestJs root directory');
     process.exit(1);
   }
   spinner.succeed();

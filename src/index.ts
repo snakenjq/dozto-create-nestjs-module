@@ -29,7 +29,8 @@ const QUESTIONS = [
 ];
 
 inquirer.prompt(QUESTIONS).then(async answers => {
-  const { moduleName, confirm } = answers;
+  let { moduleName, confirm } = answers;
+  moduleName = moduleName.toLowerCase();
   if (!confirm) return;
   const targetPath = path.join(SRC_PATH, `${moduleName}-module`);
   await initModuleFolder(targetPath);

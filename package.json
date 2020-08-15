@@ -1,16 +1,16 @@
 {
-  "name": "nestjs-create-module",
-  "version": "1.0.0",
+  "name": "dozto-nestjs-create-module",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "license": "MIT",
+  "description": "Simply create NestJS module template.",
   "scripts": {
     "start": "ts-node src/index.ts",
     "prebuild": "rimraf dist",
     "build": "tsc"
   },
   "bin": {
-    "mycli": "./dist/index.js"
+    "create": "./dist/index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
