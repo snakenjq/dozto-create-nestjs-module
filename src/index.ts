@@ -18,6 +18,7 @@ const QUESTIONS = [
     message: 'Please input module name:',
     validate: (input: string) => {
       if (!input) return 'Sorry, please input module name';
+      //TODO:validate name(special character, space)
       return true;
     },
   },
@@ -30,8 +31,8 @@ const QUESTIONS = [
 
 inquirer.prompt(QUESTIONS).then(async answers => {
   let { moduleName, confirm } = answers;
-  moduleName = moduleName.toLowerCase();
   if (!confirm) return;
+  moduleName = moduleName.toLowerCase();
   const targetPath = path.join(SRC_PATH, `${moduleName}-module`);
   await initModuleFolder(targetPath);
   replaceFolderNames(targetPath, moduleName);

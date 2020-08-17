@@ -1,4 +1,3 @@
 {
-  "template": "https://github.com/snakenjq/nestjs-template-module.git",
-  "organization": "dozto"
+  "template": "https://github.com/snakenjq/nestjs-template-module.git"
 }
